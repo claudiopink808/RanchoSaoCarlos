@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+
+:root {
+    --cor-principal: #2E7D32; /* MUDE AQUI A COR */
+    --cor-texto: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playwrite NZ Basic', serif;
+    background: linear-gradient(135deg, var(--cor-principal) 0%, #1B5E20 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--cor-texto);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.btn-voltar {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--cor-texto);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-5px);
+}
+
+/* Container principal dos botões */
+.menu-principal, .menu-opcoes {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.menu-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-opcoes {
+    display: grid;
+    gap: 15px;
+}
+
+/* Botões do menu principal */
+.btn-menu {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--cor-principal);
+    padding: 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-menu:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões das opções */
+.btn-opcao {
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--cor-principal);
+    padding: 18px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-opcoes:hover .btn-opcao:not(:hover) {
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.btn-opcao:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Mobile responsivo */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .menu-principal, .menu-opcoes {
+        padding: 20px;
+    }
+    
+    .btn-menu {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+    
+    .btn-opcao {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+}
